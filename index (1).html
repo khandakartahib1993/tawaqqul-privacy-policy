@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="Privacy Policy for Tawaqqul, an Islamic companion app.">
+  <title>Privacy Policy | Tawaqqul</title>
+
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --primary-soft: #ecfdf5;
+      --text: #17202a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --surface: #ffffff;
+      --surface-soft: #f8fafc;
+      --bg: #f1f5f9;
+      --shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(15,118,110,.12), transparent 30%),
+        var(--bg);
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226,232,240,.9);
+    }
+
+    .topbar-inner {
+      max-width: 1050px;
+      margin: auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--text);
+      font-weight: 750;
+      letter-spacing: -.2px;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), #14b8a6);
+      color: white;
+      font-size: 20px;
+      box-shadow: 0 6px 18px rgba(15,118,110,.22);
+    }
+
+    .updated {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 68px 22px 36px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #0f766e, #115e59);
+      color: white;
+      box-shadow: 0 18px 50px rgba(15,118,110,.22);
+    }
+
+    .hero-card::after {
+      content: "☪";
+      position: absolute;
+      right: 28px;
+      top: 0;
+      font-size: 180px;
+      line-height: 1;
+      opacity: .08;
+      transform: rotate(-10deg);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.13);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 17px 0 8px;
+      font-size: clamp(34px, 6vw, 54px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      max-width: 700px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+
+    .hero-date {
+      margin-top: 20px;
+      font-size: 13px;
+      color: rgba(255,255,255,.72);
+    }
+
+    .layout {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 22px 70px;
+      display: grid;
+      grid-template-columns: 245px minmax(0, 1fr);
+      gap: 26px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 78px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.82);
+      box-shadow: var(--shadow);
+    }
+
+    .toc-title {
+      margin: 0 0 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--muted);
+    }
+
+    .toc a {
+      display: block;
+      padding: 6px 0;
+      font-size: 13px;
+      color: #475569;
+    }
+
+    .toc a:hover {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .content {
+      min-width: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: clamp(24px, 5vw, 46px);
+      box-shadow: var(--shadow);
+    }
+
+    .intro {
+      margin: 0 0 34px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      background: var(--primary-soft);
+      color: #134e4a;
+    }
+
+    section {
+      scroll-margin-top: 92px;
+      padding-top: 8px;
+      margin-top: 42px;
+    }
+
+    section:first-of-type {
+      margin-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      line-height: 1.3;
+      letter-spacing: -.4px;
+      color: #0f172a;
+    }
+
+    h3 {
+      margin: 23px 0 8px;
+      font-size: 17px;
+      color: #1e293b;
+    }
+
+    p {
+      margin: 0 0 13px;
+    }
+
+    ul {
+      margin: 8px 0 17px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    .number {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+      border-radius: 10px;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 800;
+      vertical-align: middle;
+    }
+
+    .callout {
+      margin: 18px 0;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface-soft);
+    }
+
+    .closing {
+      margin-top: 44px;
+      padding: 26px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #f0fdfa, #f8fafc);
+      border: 1px solid #ccfbf1;
+    }
+
+    footer {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 22px 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .back-top {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding-top: 38px;
+      }
+
+      .hero-card {
+        padding: 32px 25px;
+        border-radius: 22px;
+      }
+
+      .hero-card::after {
+        right: -10px;
+        font-size: 130px;
+      }
+
+      .layout {
+        display: block;
+      }
+
+      .toc {
+        position: static;
+        margin-bottom: 18px;
+      }
+
+      .toc-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 0 14px;
+      }
+
+      .content {
+        border-radius: 20px;
+        padding: 26px 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .topbar-inner {
+        padding: 11px 16px;
+      }
+
+      .updated {
+        display: none;
+      }
+
+      .hero,
+      .layout,
+      footer {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .hero-card {
+        padding: 28px 21px;
+      }
+
+      .toc-links {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --border: #263244;
+        --surface: #111827;
+        --surface-soft: #172033;
+        --bg: #0b1120;
+        --primary-soft: rgba(20,184,166,.12);
+        --shadow: 0 10px 35px rgba(0,0,0,.22);
+      }
+
+      body {
+        background:
+          radial-gradient(circle at 15% 0%, rgba(20,184,166,.10), transparent 30%),
+          var(--bg);
+      }
+
+      .topbar {
+        background: rgba(15,23,42,.88);
+        border-bottom-color: rgba(51,65,85,.8);
+      }
+
+      .brand,
+      h2 {
+        color: #f8fafc;
+      }
+
+      .toc a {
+        color: #cbd5e1;
+      }
+
+      .intro {
+        color: #ccfbf1;
+      }
+
+      .callout {
+        background: var(--surface-soft);
+      }
+
+      .closing {
+        background: linear-gradient(135deg, rgba(13,148,136,.10), rgba(30,41,59,.55));
+        border-color: #134e4a;
+      }
+
+      .back-top {
+        background: var(--surface);
+      }
+    }
+
+    @media print {
+      .topbar, .toc, .back-top {
+        display: none;
+      }
+
+      body {
+        background: white;
+        color: black;
+      }
+
+      .hero {
+        padding: 0 0 25px;
+      }
+
+      .hero-card {
+        box-shadow: none;
+      }
+
+      .layout {
+        display: block;
+        padding: 0;
+      }
+
+      .content {
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      footer {
+        padding: 25px 0;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Tawaqqul home">
+        <span class="brand-mark">☪</span>
+        <span>Tawaqqul</span>
+      </a>
+      <span class="updated">Privacy Policy · August 9, 2026</span>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-card">
+      <span class="eyebrow">Privacy & Transparency</span>
+      <h1>Privacy Policy</h1>
+      <p class="hero-subtitle">
+        How Tawaqqul handles information, permissions, local data, and
+        third-party services.
+      </p>
+      <div class="hero-date">Last Updated: August 9, 2026</div>
+    </div>
+  </div>
+
+  <main class="layout">
+
+    <aside class="toc">
+      <p class="toc-title">Contents</p>
+      <nav class="toc-links" aria-label="Privacy Policy sections">
+        <a href="#s1">1. Information We Collect</a>
+        <a href="#s2">2. Account and Login</a>
+        <a href="#s3">3. Location Information</a>
+        <a href="#s4">4. Google Maps</a>
+        <a href="#s5">5. Firebase Services</a>
+        <a href="#s6">6. Firebase Cloud Messaging</a>
+        <a href="#s7">7. Data Stored on Your Device</a>
+        <a href="#s8">8. Islamic Calculators and Trackers</a>
+        <a href="#s9">9. Quran, Hadith and Other Islamic Content</a>
+        <a href="#s10">10. Notifications</a>
+        <a href="#s11">11. Internet Connection</a>
+        <a href="#s12">12. Data Sharing</a>
+        <a href="#s13">13. Third-Party Services</a>
+        <a href="#s14">14. Advertising</a>
+        <a href="#s15">15. Children's Privacy</a>
+        <a href="#s16">16. Data Security</a>
+        <a href="#s17">17. Your Choices and Permissions</a>
+        <a href="#s18">18. Account Deletion and Local Data</a>
+        <a href="#s19">19. Religious Information and Accuracy</a>
+        <a href="#s20">20. Changes to This Privacy Policy</a>
+        <a href="#s21">21. Contact Us</a>
+      </nav>
+    </aside>
+
+    <article class="content">
+
+      <div class="intro">
+        <strong>Welcome to Tawaqqul.</strong><br>
+        Tawaqqul is an Islamic companion app that brings together Quran,
+        Hadith, prayer times, duas, Asmaul Husna, Islamic tools, trackers,
+        quizzes, Smart Masjid Clock services, and other useful Islamic
+        resources.
+        <br><br>
+        We respect your privacy and believe you should know what information
+        the app uses, why it is needed, and how it is handled.
+      </div>
+
+      <p>
+        This Privacy Policy explains how Tawaqqul handles information when
+        you use the app.
+      </p>
+
+      <section id="s1">
+        <h2><span class="number">01</span>Information We Collect</h2>
+        <p>Tawaqqul is designed to collect as little personal information as reasonably possible.</p>
+        <p>Most features of the app can be used without creating an account or providing personal information.</p>
+        <p>However, certain features, particularly the Shop-related features, require you to log in.</p>
+        <p>Depending on how you use the app, Tawaqqul may handle the following types of information:</p>
+        <ul>
+          <li>Account information required for Shop-related features</li>
+          <li>Device location, when you grant location permission</li>
+          <li>App preferences and settings</li>
+          <li>Quran reading progress and saved items</li>
+          <li>Tracker and quiz progress</li>
+          <li>Information you enter into Islamic calculators</li>
+          <li>Notification preferences</li>
+          <li>Technical information required for Firebase and other services used by the app</li>
+        </ul>
+        <p>We do not collect personal information simply because you browse Quran, Hadith, duas, Asmaul Husna, or other Islamic content available in the app.</p>
+      </section>
+
+      <section id="s2">
+        <h2><span class="number">02</span>Account and Login</h2>
+        <p>An account is not required for the normal use of most Tawaqqul features.</p>
+        <p>Login is required only for features related to the Shop and other features that specifically require an authenticated account.</p>
+        <p>When you create or use a Shop-related account, information necessary to provide that service may be processed, such as:</p>
+        <ul>
+          <li>Name or display name</li>
+          <li>Email address or other login identifier</li>
+          <li>Account authentication information</li>
+          <li>Information associated with your Shop activity</li>
+          <li>Order or transaction-related information, when applicable</li>
+        </ul>
+        <p>The exact information required may depend on the Shop feature you are using.</p>
+        <p>We use account information only for purposes such as:</p>
+        <ul>
+          <li>Creating and maintaining your account</li>
+          <li>Authenticating you</li>
+          <li>Providing Shop-related services</li>
+          <li>Managing orders or other Shop activities</li>
+          <li>Communicating with you about your account or Shop activity</li>
+          <li>Maintaining the security of the service</li>
+        </ul>
+        <p>You do not need to create a Shop account just to read Quran, browse Hadith, check prayer times, use the Qibla feature, read duas, or use other general Islamic features of Tawaqqul.</p>
+      </section>
+
+      <section id="s3">
+        <h2><span class="number">03</span>Location Information</h2>
+        <p>Tawaqqul may request access to your device's location.</p>
+        <p>Location is used for specific features where it is useful or necessary.</p>
+
+        <h3>Prayer Times</h3>
+        <p>Your location may be used to calculate prayer times based on your geographical location, timezone, and selected calculation settings.</p>
+
+        <h3>Qibla</h3>
+        <p>Location may be used to determine the direction of the Qibla from your current location.</p>
+
+        <h3>Smart Masjid Clock</h3>
+        <p>Tawaqqul includes a feature for finding nearby mosques that are connected with or equipped with a Tawaqqul Smart Masjid Clock.</p>
+        <p>Your location may be used to find Smart Masjid Clock-enabled mosques near you and display relevant mosque locations.</p>
+
+        <h3>Location-based Features</h3>
+        <p>If additional location-based features are introduced in the future, location may be used only where necessary to provide those features.</p>
+
+        <p>We do not sell your location information.</p>
+        <p>Where technically possible, location information is used to provide the requested feature rather than being retained as a permanent personal profile.</p>
+        <p>You can disable location permission at any time from your Android device settings. Some features, such as location-based prayer times, Qibla, and nearby Smart Masjid Clock locations, may not work correctly without location access.</p>
+      </section>
+
+      <section id="s4">
+        <h2><span class="number">04</span>Google Maps</h2>
+        <p>Tawaqqul may provide a way to view or navigate to a mosque location using Google Maps.</p>
+        <p>Google Maps is not embedded as a default map experience inside the main Tawaqqul app.</p>
+        <p>When you choose to open a mosque location in Google Maps, the app may open the Google Maps application or the relevant Google Maps interface separately on your device.</p>
+        <p>Once you leave Tawaqqul and use Google Maps, your use of Google Maps is governed by Google's own terms and privacy policies.</p>
+        <p>Tawaqqul does not control how Google processes information when you use Google Maps.</p>
+      </section>
+
+      <section id="s5">
+        <h2><span class="number">05</span>Firebase Services</h2>
+        <p>Tawaqqul uses certain services provided by Google Firebase to support app functionality.</p>
+        <p>These services may include Firebase services used for authentication, cloud functionality, notifications, diagnostics, or other technical purposes, depending on the feature.</p>
+        <p>Firebase may process certain technical or account-related information as necessary to provide these services.</p>
+        <p>Examples may include:</p>
+        <ul>
+          <li>Device information</li>
+          <li>App installation information</li>
+          <li>Authentication information</li>
+          <li>Notification tokens</li>
+          <li>Technical diagnostics</li>
+          <li>Information necessary to deliver requested cloud services</li>
+        </ul>
+        <p>We use Firebase only where it is necessary to operate or support relevant Tawaqqul features.</p>
+        <p>Firebase is provided by Google and its handling of information is also subject to Google's applicable privacy practices.</p>
+      </section>
+
+      <section id="s6">
+        <h2><span class="number">06</span>Firebase Cloud Messaging</h2>
+        <p>Tawaqqul uses Firebase Cloud Messaging (FCM) to deliver push notifications to your device.</p>
+        <p>Notifications may be used for features such as:</p>
+        <ul>
+          <li>Prayer reminders</li>
+          <li>Islamic reminders</li>
+          <li>Daily Hadith</li>
+          <li>Daily Ayat</li>
+          <li>Important app notifications</li>
+          <li>Shop-related notifications, when applicable</li>
+          <li>Other notifications that you choose to receive</li>
+        </ul>
+        <p>To deliver push notifications, Firebase Cloud Messaging may use a device-specific registration token or similar technical identifier.</p>
+        <p>This token is used to identify the destination device for notifications. It is not intended to identify you personally.</p>
+        <p>You can manage or disable notifications through the Tawaqqul app settings and/or your Android device settings.</p>
+      </section>
+
+      <section id="s7">
+        <h2><span class="number">07</span>Data Stored on Your Device</h2>
+        <p>Tawaqqul stores certain information locally on your device to make the app work smoothly and remember your preferences.</p>
+        <p>This may include:</p>
+        <ul>
+          <li>Theme preference</li>
+          <li>Language preference</li>
+          <li>Notification settings</li>
+          <li>Prayer calculation settings</li>
+          <li>Selected location</li>
+          <li>Quran reading progress</li>
+          <li>Last read position</li>
+          <li>Bookmarks or saved content</li>
+          <li>Quiz progress and scores</li>
+          <li>Ramadan Tracker information</li>
+          <li>Zakat Tracker information</li>
+          <li>Saved calculator information</li>
+          <li>Other app preferences</li>
+        </ul>
+        <p>Some of these settings may be stored using Android's local storage mechanisms, including SharedPreferences, or other appropriate local storage systems used by the app.</p>
+        <p>Information stored locally remains on your device unless the app removes it, you clear the app's data, or you uninstall the app.</p>
+        <p>Local information is not automatically sent to Tawaqqul simply because it is stored on your device.</p>
+      </section>
+
+      <section id="s8">
+        <h2><span class="number">08</span>Islamic Calculators and Trackers</h2>
+        <p>Tawaqqul provides various Islamic tools, which may include:</p>
+        <ul>
+          <li>Zakat Calculator</li>
+          <li>Zakat Tracker</li>
+          <li>Islamic Inheritance Calculator</li>
+          <li>Ramadan Tracker</li>
+          <li>Other Islamic calculators and utilities</li>
+        </ul>
+        <p>You may enter information such as money, assets, land measurements, family relationships, or other values depending on the calculator.</p>
+        <p>Unless a particular feature clearly states otherwise, this information is processed and stored locally on your device and is not collected by Tawaqqul as personal data.</p>
+        <p>These calculators are provided as helpful tools and should not be considered a substitute for advice from a qualified Islamic scholar, financial professional, lawyer, or other appropriate professional.</p>
+      </section>
+
+      <section id="s9">
+        <h2><span class="number">09</span>Quran, Hadith and Other Islamic Content</h2>
+        <p>Tawaqqul provides Islamic resources such as:</p>
+        <ul>
+          <li>Quran</li>
+          <li>Hadith collections</li>
+          <li>Duas</li>
+          <li>Asmaul Husna</li>
+          <li>Selected Ayat</li>
+          <li>Islamic articles</li>
+          <li>Islamic quizzes</li>
+          <li>Other educational Islamic content</li>
+        </ul>
+        <p>Much of this content may be included within the application and stored locally.</p>
+        <p>Reading, searching, or browsing this content does not by itself require us to collect personal information about you.</p>
+        <p>Where content is obtained from third-party sources, authors, translators, publishers, or contributors, appropriate attribution or credit may be provided within the app.</p>
+      </section>
+
+      <section id="s10">
+        <h2><span class="number">10</span>Notifications</h2>
+        <p>Notifications are an optional part of Tawaqqul's experience.</p>
+        <p>Depending on your settings and the features you use, Tawaqqul may send notifications such as:</p>
+        <ul>
+          <li>Prayer time reminders</li>
+          <li>Daily Hadith</li>
+          <li>Daily Ayat</li>
+          <li>Islamic reminders</li>
+          <li>Smart Masjid Clock-related information</li>
+          <li>Shop-related notifications</li>
+          <li>Other important or optional app notifications</li>
+        </ul>
+        <p>You can control notifications from the Tawaqqul settings or your Android device settings.</p>
+        <p>Tawaqqul does not require you to keep notifications enabled in order to use the main Islamic features of the app.</p>
+      </section>
+
+      <section id="s11">
+        <h2><span class="number">11</span>Internet Connection</h2>
+        <p>Some Tawaqqul features require an internet connection.</p>
+        <p>An internet connection may be required for features such as:</p>
+        <ul>
+          <li>Shop-related services</li>
+          <li>Account authentication</li>
+          <li>Cloud-based services</li>
+          <li>Push notifications</li>
+          <li>Smart Masjid Clock-related online features</li>
+          <li>Updating or retrieving certain information</li>
+          <li>Opening external services such as Google Maps</li>
+        </ul>
+        <p>Other content that is already included within the app may remain available without an internet connection.</p>
+      </section>
+
+      <section id="s12">
+        <h2><span class="number">12</span>Data Sharing</h2>
+        <p>We do not sell, rent, or trade your personal information.</p>
+        <p>We do not intentionally share your personal information with advertising companies for the purpose of selling or profiling you.</p>
+        <p>Information may be processed by third-party service providers when it is necessary to provide a feature of Tawaqqul.</p>
+        <p>For example, third-party services may be involved in:</p>
+        <ul>
+          <li>Account authentication</li>
+          <li>Cloud services</li>
+          <li>Push notifications</li>
+          <li>Technical diagnostics</li>
+          <li>External map services</li>
+        </ul>
+        <p>These services process information according to their own terms and privacy policies.</p>
+        <p>We aim to limit the information shared with third-party services to what is reasonably necessary for the relevant feature.</p>
+      </section>
+
+      <section id="s13">
+        <h2><span class="number">13</span>Third-Party Services</h2>
+        <p>Tawaqqul currently uses or may use third-party services to support certain features.</p>
+
+        <h3>Google Firebase</h3>
+        <p>Used for services such as authentication, cloud functionality, notifications, and other technical services depending on the feature.</p>
+
+        <h3>Firebase Cloud Messaging</h3>
+        <p>Used to deliver push notifications to your device.</p>
+
+        <h3>Google Maps</h3>
+        <p>Used when you choose to open a mosque or other location in Google Maps for viewing or navigation.</p>
+        <p>Google Maps may operate separately from the Tawaqqul application.</p>
+
+        <p>Third-party services may have their own privacy policies and terms of service. Their handling of information is governed by those policies in addition to the practices described in this Privacy Policy.</p>
+      </section>
+
+      <section id="s14">
+        <h2><span class="number">14</span>Advertising</h2>
+        <p>Tawaqqul does not use your personal information to sell or provide targeted advertising profiles.</p>
+        <p>If advertising or other monetization services are introduced in a future version of the app, this Privacy Policy will be updated to explain how those services handle user information.</p>
+      </section>
+
+      <section id="s15">
+        <h2><span class="number">15</span>Children's Privacy</h2>
+        <p>Tawaqqul is intended to be a general-purpose Islamic application and is not designed to collect personal information from children.</p>
+        <p>We do not knowingly collect personal information from children for the purpose of creating personal profiles or tracking them.</p>
+        <p>If you believe that a child has provided personal information through a feature of Tawaqqul, please contact us so that we can review the situation and take appropriate action.</p>
+      </section>
+
+      <section id="s16">
+        <h2><span class="number">16</span>Data Security</h2>
+        <p>We take reasonable measures to protect information handled through Tawaqqul.</p>
+        <p>Account-related and cloud-based information is handled using the security mechanisms provided by the services we use.</p>
+        <p>Information stored locally on your device is protected by the security of your Android device and the app's local storage mechanisms.</p>
+        <p>However, no method of electronic storage or internet transmission can be guaranteed to be completely secure.</p>
+        <p>For this reason, we cannot guarantee absolute security of information.</p>
+      </section>
+
+      <section id="s17">
+        <h2><span class="number">17</span>Your Choices and Permissions</h2>
+        <p>You are in control of the permissions you provide to Tawaqqul.</p>
+        <p>Depending on your device and the features you use, you can:</p>
+        <ul>
+          <li>Allow or deny location access</li>
+          <li>Enable or disable notifications</li>
+          <li>Change your language</li>
+          <li>Change the app theme</li>
+          <li>Change prayer calculation settings</li>
+          <li>Clear locally stored app data</li>
+          <li>Log out of your Shop account</li>
+          <li>Uninstall the application</li>
+        </ul>
+        <p>You can manage permissions through Android's system settings.</p>
+        <p>Some features may not work correctly if the required permission or service is disabled.</p>
+      </section>
+
+      <section id="s18">
+        <h2><span class="number">18</span>Account Deletion and Local Data</h2>
+        <p>If you use a Shop-related account, account information may be associated with your Shop activities.</p>
+        <p>If Tawaqqul provides an account deletion option, you may use that option to request deletion of your account and associated information, subject to any information that must be retained for legitimate purposes such as legal, security, fraud prevention, or transaction-related requirements.</p>
+        <p>Information stored only on your device can generally be removed by clearing the app's data or uninstalling Tawaqqul.</p>
+        <p>If you need help with account-related privacy requests, you can contact us using the contact information provided within the app.</p>
+      </section>
+
+      <section id="s19">
+        <h2><span class="number">19</span>Religious Information and Accuracy</h2>
+        <p>Tawaqqul is intended to be a useful Islamic companion and educational resource.</p>
+        <p>Prayer times, Islamic calculations, translations, Hadith information, and other content may depend on the selected calculation method, source, interpretation, location, or other factors.</p>
+        <p>We make reasonable efforts to provide useful and accurate information, but users should verify important religious matters with qualified scholars or trusted Islamic authorities.</p>
+        <p>Tawaqqul should not be considered a replacement for qualified religious guidance.</p>
+      </section>
+
+      <section id="s20">
+        <h2><span class="number">20</span>Changes to This Privacy Policy</h2>
+        <p>As Tawaqqul grows, new features or services may be added.</p>
+        <p>We may update this Privacy Policy when our data practices change or when necessary to clarify existing practices.</p>
+        <p>When we make changes, we will update the Last Updated date at the top of this Privacy Policy.</p>
+        <p>We encourage you to review this page occasionally to stay informed about how Tawaqqul handles information.</p>
+      </section>
+
+      <section id="s21">
+        <h2><span class="number">21</span>Contact Us</h2>
+        <p>If you have any questions, concerns, suggestions, or privacy-related requests regarding Tawaqqul, please contact us using the contact information provided inside the Tawaqqul app.</p>
+        <p>We will do our best to respond to reasonable privacy-related questions and requests.</p>
+      </section>
+
+      <div class="closing">
+        <h2>Our Privacy Commitment</h2>
+        <p>Tawaqqul is built with a simple goal: to provide useful Islamic resources while respecting the privacy of the people who use the app.</p>
+        <p>Most of the app can be used without an account, and we try to keep personal data collection to a minimum.</p>
+        <p>When information or permissions are required, we aim to use them only for the feature that needs them.</p>
+        <p>We will continue to review and improve our privacy practices as Tawaqqul develops.</p>
+        <p><strong>Thank you for using Tawaqqul.</strong></p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    © 2026 Tawaqqul. All rights reserved.
+    <br>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </footer>
+
+</body>
+</html>
