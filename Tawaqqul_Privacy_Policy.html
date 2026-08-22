@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Tawaqqul, an Islamic companion app.">
+  <meta name="theme-color" content="#0b6b57">
+  <title>Tawaqqul Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f1f7f4;
+      --paper: #ffffff;
+      --paper-soft: #f7fbf9;
+      --ink: #15302a;
+      --muted: #63766f;
+      --brand: #0b6b57;
+      --brand-dark: #084d40;
+      --brand-soft: #dff1eb;
+      --line: #d8e7e1;
+      --shadow: 0 24px 70px rgba(22, 63, 52, .10);
+      --radius: 24px;
+      --content: 760px;
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0c1714;
+      --paper: #12211d;
+      --paper-soft: #162a24;
+      --ink: #edf7f3;
+      --muted: #a3b8b0;
+      --brand: #59c7a8;
+      --brand-dark: #98e0cc;
+      --brand-soft: #183a31;
+      --line: #2a453c;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .28);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 32px; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 6% 0%, rgba(53, 170, 137, .12), transparent 25rem),
+        radial-gradient(circle at 94% 12%, rgba(196, 158, 74, .10), transparent 22rem),
+        var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--brand); text-underline-offset: 3px; }
+    a:hover { color: var(--brand-dark); }
+    button, summary { font: inherit; }
+
+    .progress {
+      position: fixed; inset: 0 auto auto 0; z-index: 100;
+      width: 0; height: 4px; background: linear-gradient(90deg, #0b6b57, #56c7a7);
+      box-shadow: 0 0 14px rgba(53, 170, 137, .35);
+    }
+
+    .page-shell { width: min(1420px, 100%); margin: 0 auto; padding: 28px; }
+    .layout { display: grid; grid-template-columns: 292px minmax(0, 1fr); gap: 28px; align-items: start; }
+
+    .sidebar {
+      position: sticky; top: 28px; height: calc(100vh - 56px); overflow: hidden;
+      display: flex; flex-direction: column; background: rgba(255, 255, 255, .68);
+      border: 1px solid rgba(255, 255, 255, .7); border-radius: var(--radius);
+      box-shadow: var(--shadow); backdrop-filter: blur(18px);
+    }
+    html[data-theme="dark"] .sidebar { background: rgba(18, 33, 29, .82); border-color: var(--line); }
+    .brand-block { padding: 26px 24px 18px; border-bottom: 1px solid var(--line); }
+    .brand-mark { display: flex; gap: 12px; align-items: center; }
+    .brand-icon {
+      display: grid; place-items: center; width: 42px; height: 42px; border-radius: 14px;
+      color: white; background: linear-gradient(145deg, var(--brand), var(--brand-dark));
+      box-shadow: 0 10px 24px rgba(11, 107, 87, .22); font-weight: 800; letter-spacing: -.04em;
+    }
+    .brand-name { margin: 0; font-size: 1.04rem; letter-spacing: .08em; font-weight: 800; }
+    .brand-caption { margin: 1px 0 0; color: var(--muted); font-size: .75rem; line-height: 1.3; }
+    .toc-label { margin: 18px 24px 8px; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .toc { margin: 0; padding: 0 14px 24px; list-style: none; overflow-y: auto; scrollbar-width: thin; }
+    .toc a {
+      display: grid; grid-template-columns: 28px 1fr; gap: 7px; align-items: start;
+      padding: 8px 10px; border-radius: 10px; color: var(--muted); text-decoration: none;
+      font-size: .79rem; line-height: 1.35; transition: .2s ease;
+    }
+    .toc a span { color: var(--brand); font-size: .68rem; font-weight: 800; padding-top: 2px; }
+    .toc a:hover, .toc a.active { background: var(--brand-soft); color: var(--ink); }
+
+    .document { min-width: 0; }
+    .hero {
+      position: relative; overflow: hidden; padding: clamp(38px, 6vw, 84px);
+      border-radius: var(--radius); color: #fff;
+      background: linear-gradient(135deg, #073f35 0%, #0b6b57 55%, #278e73 100%);
+      box-shadow: var(--shadow);
+    }
+    .hero::before, .hero::after { content: ""; position: absolute; border-radius: 999px; pointer-events: none; }
+    .hero::before { width: 380px; height: 380px; right: -125px; top: -185px; border: 1px solid rgba(255,255,255,.2); box-shadow: 0 0 0 42px rgba(255,255,255,.035), 0 0 0 84px rgba(255,255,255,.025); }
+    .hero::after { width: 210px; height: 210px; left: -80px; bottom: -120px; background: rgba(203, 169, 88, .17); filter: blur(2px); }
+    .hero-content { position: relative; z-index: 1; max-width: 760px; }
+    .overline { margin: 0 0 15px; color: #bfe8dc; font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 690px; font-size: clamp(2.6rem, 7vw, 5.7rem); line-height: .96; letter-spacing: -.065em; }
+    .hero-lead { margin: 24px 0 0; max-width: 660px; color: rgba(255,255,255,.82); font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.65; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .meta-pill { padding: 8px 13px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; background: rgba(255,255,255,.1); color: #fff; font-size: .79rem; backdrop-filter: blur(6px); }
+    .hero-actions { position: absolute; top: 24px; right: 24px; z-index: 2; display: flex; gap: 8px; }
+    .icon-button {
+      display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,.22);
+      border-radius: 999px; padding: 9px 13px; color: #fff; background: rgba(255,255,255,.1);
+      cursor: pointer; transition: .2s ease; backdrop-filter: blur(10px);
+    }
+    .icon-button:hover { background: rgba(255,255,255,.2); transform: translateY(-1px); }
+    .icon-button svg { width: 16px; height: 16px; }
+
+    .mobile-toc { display: none; margin-top: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); }
+    .mobile-toc summary { padding: 14px 17px; cursor: pointer; font-weight: 750; color: var(--brand-dark); }
+    .mobile-toc ol { margin: 0; padding: 0 18px 18px 42px; columns: 2; }
+    .mobile-toc li { break-inside: avoid; padding: 3px 0; }
+    .mobile-toc a { color: var(--muted); text-decoration: none; font-size: .84rem; }
+
+    .quick-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0; }
+    .fact { padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: 0 10px 30px rgba(22,63,52,.05); }
+    .fact-icon { display: grid; place-items: center; width: 34px; height: 34px; margin-bottom: 12px; border-radius: 11px; background: var(--brand-soft); color: var(--brand); font-weight: 900; }
+    .fact h2 { margin: 0 0 4px; font-size: .92rem; letter-spacing: -.02em; }
+    .fact p { margin: 0; color: var(--muted); font-size: .76rem; line-height: 1.5; }
+
+    .paper { padding: clamp(24px, 5vw, 64px); border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow); }
+    .intro { max-width: var(--content); margin: 0 auto 54px; padding-bottom: 38px; border-bottom: 1px solid var(--line); }
+    .intro-label { margin: 0 0 16px; color: var(--brand); font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .intro p { margin: 0 0 15px; font-size: 1.05rem; }
+    .intro p:first-of-type { font-size: 1.35rem; line-height: 1.5; letter-spacing: -.02em; }
+
+    .policy-section { max-width: var(--content); margin: 0 auto; padding: 38px 0; border-bottom: 1px solid var(--line); }
+    .section-heading { display: grid; grid-template-columns: 52px 1fr; gap: 17px; align-items: start; margin-bottom: 23px; }
+    .section-number {
+      display: grid; place-items: center; width: 48px; height: 48px; border-radius: 15px;
+      color: var(--brand); background: var(--brand-soft); font-size: .78rem; font-weight: 900; letter-spacing: .06em;
+    }
+    .section-number-heart { font-size: 1.05rem; }
+    .section-kicker { margin: 0 0 2px; color: var(--muted); font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .policy-section h2 { margin: 0; color: var(--brand-dark); font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.2; letter-spacing: -.035em; }
+    .section-body { padding-left: 69px; }
+    .section-body p { margin: 0 0 17px; }
+    .section-body h3 { margin: 30px 0 10px; color: var(--ink); font-size: 1.04rem; letter-spacing: -.015em; }
+    .section-body h3:first-child { margin-top: 0; }
+    .section-body strong { color: var(--ink); font-weight: 750; }
+    .policy-list { margin: 12px 0 22px; padding: 0; list-style: none; }
+    .policy-list li { position: relative; margin: 9px 0; padding: 11px 14px 11px 40px; border-radius: 12px; background: var(--paper-soft); }
+    .policy-list li::before { content: "✓"; position: absolute; left: 14px; top: 11px; color: var(--brand); font-weight: 900; }
+    .commitment { border: 1px solid var(--line); border-bottom: 1px solid var(--line); border-radius: 20px; margin-top: 38px; padding: 30px; background: linear-gradient(145deg, var(--brand-soft), var(--paper-soft)); }
+    .commitment .section-body { padding-left: 69px; }
+
+    .document-footer { max-width: var(--content); margin: 28px auto 0; padding: 20px 0 0; color: var(--muted); font-size: .78rem; text-align: center; }
+    .back-top { display: inline-flex; align-items: center; gap: 7px; margin-top: 9px; color: var(--brand); text-decoration: none; font-weight: 700; }
+
+    :focus-visible { outline: 3px solid rgba(64, 179, 146, .55); outline-offset: 3px; border-radius: 5px; }
+
+    @media (max-width: 1100px) {
+      .page-shell { padding: 18px; }
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .mobile-toc { display: block; }
+      .quick-facts { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .page-shell { padding: 0; }
+      .hero, .paper { border-radius: 0; border-left: 0; border-right: 0; }
+      .hero { padding: 94px 24px 42px; }
+      .hero-actions { top: 18px; right: 18px; }
+      .icon-button span { display: none; }
+      .quick-facts { grid-template-columns: 1fr 1fr; margin: 12px; }
+      .fact { padding: 15px; border-radius: 15px; }
+      .mobile-toc { margin: 12px; }
+      .mobile-toc ol { columns: 1; }
+      .paper { padding: 34px 22px; }
+      .section-heading { grid-template-columns: 42px 1fr; gap: 13px; }
+      .section-number { width: 42px; height: 42px; border-radius: 13px; }
+      .section-body, .commitment .section-body { padding-left: 0; }
+      .policy-section { padding: 31px 0; }
+      .commitment { padding: 22px; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 17mm; }
+      :root, html[data-theme="dark"] { --ink: #132d27; --muted: #5d6f69; --brand: #0b6b57; --brand-dark: #084d40; --brand-soft: #e7f5f0; --line: #d6e4df; --paper: #fff; --paper-soft: #f7faf9; }
+      body { background: #fff; font-size: 10.5pt; }
+      .progress, .sidebar, .mobile-toc, .hero-actions, .quick-facts, .back-top { display: none !important; }
+      .page-shell { width: 100%; padding: 0; }
+      .layout { display: block; }
+      .hero { min-height: 235mm; display: flex; align-items: center; border-radius: 0; box-shadow: none; page-break-after: always; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .paper { padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+      .policy-section { break-inside: auto; }
+      .section-heading, h3 { break-after: avoid; }
+      .policy-list li, p { orphans: 3; widows: 3; }
+      a { color: inherit; text-decoration: none; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #5d6f69; word-break: break-all; }
+      a[href^="mailto"]::after { content: ""; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="page-shell">
+    <div class="layout">
+      <aside class="sidebar" aria-label="Privacy Policy navigation">
+        <div class="brand-block">
+          <div class="brand-mark">
+            <div class="brand-icon" aria-hidden="true">T</div>
+            <div>
+              <p class="brand-name">TAWAQQUL</p>
+              <p class="brand-caption">Islamic Companion App</p>
+            </div>
+          </div>
+        </div>
+        <p class="toc-label">On this page</p>
+        <ol class="toc"><li><a href="#section-1-summary-of-our-approach"><span>1</span>Summary of Our Approach</a></li><li><a href="#section-2-information-we-handle"><span>2</span>Information We Handle</a></li><li><a href="#section-3-account-login-profile-and-shop-data"><span>3</span>Account, Login, Profile, and Shop Data</a></li><li><a href="#section-4-location-information"><span>4</span>Location Information</a></li><li><a href="#section-5-local-storage-and-cloud-sync"><span>5</span>Local Storage and Cloud Sync</a></li><li><a href="#section-6-feedback-and-communications"><span>6</span>Feedback and Communications</a></li><li><a href="#section-7-notifications"><span>7</span>Notifications</a></li><li><a href="#section-8-third-party-services"><span>8</span>Third-Party Services</a></li><li><a href="#section-9-islamic-content-trackers-and-sensitive-information"><span>9</span>Islamic Content, Trackers, and Sensitive Information</a></li><li><a href="#section-10-how-we-use-information"><span>10</span>How We Use Information</a></li><li><a href="#section-11-data-sharing-and-sale"><span>11</span>Data Sharing and Sale</a></li><li><a href="#section-12-data-retention"><span>12</span>Data Retention</a></li><li><a href="#section-13-your-choices-access-correction-and-deletion"><span>13</span>Your Choices, Access, Correction, and Deletion</a></li><li><a href="#section-14-permissions"><span>14</span>Permissions</a></li><li><a href="#section-15-security"><span>15</span>Security</a></li><li><a href="#section-16-international-processing"><span>16</span>International Processing</a></li><li><a href="#section-17-children-s-privacy"><span>17</span>Children&#x27;s Privacy</a></li><li><a href="#section-18-accuracy-of-islamic-and-location-information"><span>18</span>Accuracy of Islamic and Location Information</a></li><li><a href="#section-19-changes-to-this-policy"><span>19</span>Changes to This Policy</a></li><li><a href="#section-20-contact-us"><span>20</span>Contact Us</a></li><li><a href="#privacy-commitment"><span>✓</span>Our Privacy Commitment</a></li></ol>
+      </aside>
+
+      <main class="document">
+        <header class="hero">
+          <div class="hero-actions">
+            <button class="icon-button" id="themeButton" type="button" aria-label="Switch color theme">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+              <span>Theme</span>
+            </button>
+            <button class="icon-button" type="button" onclick="window.print()" aria-label="Print or save as PDF">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+              <span>Print</span>
+            </button>
+          </div>
+          <div class="hero-content">
+            <p class="overline">Tawaqqul · Legal</p>
+            <h1>Privacy<br>Policy</h1>
+            <p class="hero-lead">How Tawaqqul handles information, permissions, local storage, cloud services, location features, Shop data, and your choices.</p>
+            <div class="meta-row">
+              <span class="meta-pill">Last updated: August 22, 2026</span>
+              <span class="meta-pill">Version 1.0</span>
+              <span class="meta-pill">20 sections</span>
+            </div>
+          </div>
+        </header>
+
+        <details class="mobile-toc">
+          <summary>Browse policy sections</summary>
+          <ol><li><a href="#section-1-summary-of-our-approach"><span>1</span>Summary of Our Approach</a></li><li><a href="#section-2-information-we-handle"><span>2</span>Information We Handle</a></li><li><a href="#section-3-account-login-profile-and-shop-data"><span>3</span>Account, Login, Profile, and Shop Data</a></li><li><a href="#section-4-location-information"><span>4</span>Location Information</a></li><li><a href="#section-5-local-storage-and-cloud-sync"><span>5</span>Local Storage and Cloud Sync</a></li><li><a href="#section-6-feedback-and-communications"><span>6</span>Feedback and Communications</a></li><li><a href="#section-7-notifications"><span>7</span>Notifications</a></li><li><a href="#section-8-third-party-services"><span>8</span>Third-Party Services</a></li><li><a href="#section-9-islamic-content-trackers-and-sensitive-information"><span>9</span>Islamic Content, Trackers, and Sensitive Information</a></li><li><a href="#section-10-how-we-use-information"><span>10</span>How We Use Information</a></li><li><a href="#section-11-data-sharing-and-sale"><span>11</span>Data Sharing and Sale</a></li><li><a href="#section-12-data-retention"><span>12</span>Data Retention</a></li><li><a href="#section-13-your-choices-access-correction-and-deletion"><span>13</span>Your Choices, Access, Correction, and Deletion</a></li><li><a href="#section-14-permissions"><span>14</span>Permissions</a></li><li><a href="#section-15-security"><span>15</span>Security</a></li><li><a href="#section-16-international-processing"><span>16</span>International Processing</a></li><li><a href="#section-17-children-s-privacy"><span>17</span>Children&#x27;s Privacy</a></li><li><a href="#section-18-accuracy-of-islamic-and-location-information"><span>18</span>Accuracy of Islamic and Location Information</a></li><li><a href="#section-19-changes-to-this-policy"><span>19</span>Changes to This Policy</a></li><li><a href="#section-20-contact-us"><span>20</span>Contact Us</a></li><li><a href="#privacy-commitment"><span>✓</span>Our Privacy Commitment</a></li></ol>
+        </details>
+
+        <section class="quick-facts" aria-label="Privacy at a glance">
+          <article class="fact"><div class="fact-icon">✓</div><h2>No personal data sale</h2><p>We do not sell or rent your personal information.</p></article>
+          <article class="fact"><div class="fact-icon">⌂</div><h2>Local-first features</h2><p>Most Islamic reading and tracker data stays on your device.</p></article>
+          <article class="fact"><div class="fact-icon">◎</div><h2>Location by choice</h2><p>Location is used only after permission for relevant features.</p></article>
+          <article class="fact"><div class="fact-icon">◌</div><h2>You stay in control</h2><p>Manage permissions, notifications, data, and deletion requests.</p></article>
+        </section>
+
+        <article class="paper">
+          <section class="intro">
+            <p class="intro-label">Welcome</p>
+            <p>Welcome to <strong>Tawaqqul</strong>.</p><p><strong>Tawaqqul</strong> is an Islamic companion app that provides Quran, Hadith, duas, Asmaul Husna, prayer times, Qibla, nearby-mosque discovery, Islamic learning content, trackers, calculators, quizzes, <strong>Smart Masjid Clock</strong> information, a Shop, and related services.</p><p>This Privacy Policy explains what information the current version of <strong>Tawaqqul</strong> handles, why it is used, where it is stored, when it is shared with service providers, and the choices available to you.</p><p><strong>Tawaqqul</strong> is an independent application. It is not an official application of <strong>Quran.com</strong>, <strong>Quran Foundation</strong>, <strong>OpenStreetMap</strong>, Google, <strong>Firebase</strong>, <strong>AlAdhan</strong>, or any other third-party service named in this Policy.</p>
+          </section>
+          
+<section class="policy-section" id="section-1-summary-of-our-approach" data-section>
+  <div class="section-heading">
+    <span class="section-number">01</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Summary of Our Approach</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>Most general Islamic features can be used without creating an account. We try to keep data collection limited to what is needed for the feature you choose to use.</p><h3>General Islamic Features</h3><p>Reading bundled Quran, Hadith, duas, Asmaul Husna, Nurani Quran, and other included educational content does not require you to provide a name, phone number, or email address. Quran content included in the current app build is stored locally in the app, so ordinary Quran reading does not send your reading activity to <strong>Quran.com</strong> or <strong>Quran Foundation</strong>.</p><h3>Account and Shop</h3><p>Phone-based login is used for account and Shop-related features. If you sign in, use the Shop, submit feedback, or use a cloud-synced feature, the information described below may be processed.</p><p>We do not sell personal information and do not use it to build targeted advertising profiles.</p></div>
+</section>
+<section class="policy-section" id="section-2-information-we-handle" data-section>
+  <div class="section-heading">
+    <span class="section-number">02</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Information We Handle</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>Depending on the features you use, <strong>Tawaqqul</strong> may handle:</p><ul class="policy-list"><li>Account information, including your verified phone number, <strong>Firebase</strong> user identifier, name, optional email address, profile address, and authentication status</li><li>Shop and transaction information, including saved delivery addresses, ordered items, quantities, selected variants, order totals, discounts, delivery area and charge, selected payment method, order status, coupon use, reviews, product questions, and Shop notifications</li><li>Feedback information, including feedback type and message, optional contact details, and, when signed in, your account name and phone number</li><li>Location information, including precise or approximate coordinates when permission is granted, a manually selected location, and a locally cached location name</li><li>App activity and preferences, including settings, notification choices, Quran bookmarks and last-read position, saved or favorite items, tracker entries, quiz activity, reward points, and locally scheduled reminders</li><li>Zakat records, including the values, dates, obligations, and transaction entries you choose to enter</li><li>Technical information needed to operate the app, including platform, app version, <strong>Firebase</strong> authentication and installation identifiers, <strong>Firebase Cloud Messaging</strong> registration token, and last-active timestamp for signed-in users</li></ul><p>The current app does not request access to your camera, microphone, contacts, or general photo and file library.</p></div>
+</section>
+<section class="policy-section" id="section-3-account-login-profile-and-shop-data" data-section>
+  <div class="section-heading">
+    <span class="section-number">03</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Account, Login, Profile, and Shop Data</h2>
+    </div>
+  </div>
+  <div class="section-body"><p><strong>Tawaqqul</strong> uses <strong>Firebase</strong> Authentication for phone-number verification. Your phone number and authentication information are processed to send and verify a one-time password, maintain your signed-in session, and protect account-only features.</p><p>If you create or update a profile, the app may store your name, phone number, optional email, address, <strong>Firebase</strong> user identifier, saved addresses, and account creation information in Google Cloud Firestore.</p><p>When you place an order, <strong>Tawaqqul</strong> stores the information required to process, deliver, support, and maintain a record of that order. The current app records the selected payment method but does not collect bank-card details, mobile-banking PINs, or payment-account passwords.</p><p>Reviews and product questions may include your name, phone number, rating, comment or question, and submission time. These are used to display and manage the relevant Shop feature.</p><p>Affiliate products may open an external website or app. <strong>Tawaqqul</strong> does not control the information collected by that external service.</p></div>
+</section>
+<section class="policy-section" id="section-4-location-information" data-section>
+  <div class="section-heading">
+    <span class="section-number">04</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Location Information</h2>
+    </div>
+  </div>
+  <div class="section-body"><p><strong>Tawaqqul</strong> may request precise and approximate location access. Location is used only for features that need a geographical position.</p><h3>Location</h3><p>The app may obtain your current latitude and longitude from your device after permission is granted. It may also let you select a location manually. The most recent coordinates and location name may be cached on your device so that prayer information can load more quickly and remain partially available offline.</p><h3>Nearby Mosques and Map</h3><p>To find nearby mosques, <strong>Tawaqqul</strong> sends a small geographic bounding box derived from your current coordinates to a public <strong>Overpass API</strong> server. The server returns nearby <strong>OpenStreetMap</strong> places. The app then filters and measures distances on your device. When map view is opened, map tiles are requested from <strong>OpenStreetMap</strong>&#x27;s tile service. Those providers may receive your IP address, request time, user-agent or app identifier, and the requested geographic area as part of normal server operation.</p><h3>Prayer Times and Geocoding</h3><p>Your coordinates and date are sent to the <strong>AlAdhan</strong> API to retrieve prayer times and Hijri date information. When the app converts coordinates into a place name, or a manually entered place name into coordinates, the device&#x27;s geocoding service may process the location. Depending on your platform, that service may be provided by Google, Apple, or another system provider.</p><h3>Qibla and <strong>Smart Masjid Clock</strong></h3><p>Your location is used on the device to calculate the Qibla direction and to sort <strong>Smart Masjid Clock</strong>-enabled mosques retrieved from Firestore by distance.</p><p><strong>Tawaqqul</strong> does not intentionally save your raw GPS coordinates to its own Firestore database for prayer times, Qibla, or <strong>OpenStreetMap</strong> nearby-mosque search. However, third-party location services receive the information described above when the relevant feature makes a network request.</p><p>You may deny or revoke location permission in your device settings. Prayer times, Qibla, nearby mosques, and <strong>Smart Masjid Clock</strong> discovery may be unavailable or less accurate without it.</p></div>
+</section>
+<section class="policy-section" id="section-5-local-storage-and-cloud-sync" data-section>
+  <div class="section-heading">
+    <span class="section-number">05</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Local Storage and Cloud Sync</h2>
+    </div>
+  </div>
+  <div class="section-body"><h3>Local-only Data</h3><p><strong>Tawaqqul</strong> uses SharedPreferences, Isar, Firestore offline cache, and other device storage mechanisms. Depending on the feature, locally stored data may include theme and font settings, notification settings, selected or cached location, prayer-time cache, Quran bookmarks and last-read position, Nurani Quran page and bookmarks, Hadith and dua indexes, favorite mosque, Tasbih history, Amal Tracker, Ramadan Tracker, Zakat Tracker cache, and other preferences.</p><p>Local information generally remains until the app removes it, you clear app data, or you uninstall the app. Device backups or operating-system features may retain some data according to your device settings.</p><h3>Cloud-synced Data</h3><p>If you are signed in, Zakat Tracker records are synchronized to a Firestore subcollection under your account. Quiz points, quiz activity, reward vouchers, profile information, Shop activity, and notification information may also be stored in Firestore. Because Zakat records can reveal financial and religious information, enter and sync only information you are comfortable storing with your account.</p><p>Logging out does not automatically delete cloud records or previously submitted orders, reviews, questions, or feedback.</p></div>
+</section>
+<section class="policy-section" id="section-6-feedback-and-communications" data-section>
+  <div class="section-heading">
+    <span class="section-number">06</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Feedback and Communications</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>When you submit feedback, <strong>Tawaqqul</strong> stores the feedback type, message, optional email or phone number, platform, app version, submission time, and status in Firestore. If you are signed in, the feedback also includes your account name and phone number.</p><p>The same feedback details are sent through a <strong>Tawaqqul</strong>-operated <strong>Cloudflare</strong> Worker so that an email notification can be delivered through <strong>Resend</strong> to the app owner. Do not include passwords, payment PINs, private documents, or other unnecessary sensitive information in feedback.</p><p>We may use the contact information you voluntarily provide to respond to your message.</p></div>
+</section>
+<section class="policy-section" id="section-7-notifications" data-section>
+  <div class="section-heading">
+    <span class="section-number">07</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Notifications</h2>
+    </div>
+  </div>
+  <div class="section-body"><p><strong>Tawaqqul</strong> uses local notifications and <strong>Firebase Cloud Messaging</strong>.</p><p>Local notifications may be scheduled on your device for prayer times, daily Islamic content, and other reminders. Android permissions for notifications, alarms, wake lock, vibration, and restart handling are used to deliver these reminders reliably and do not by themselves give <strong>Tawaqqul</strong> access to your personal files.</p><p><strong>Firebase Cloud Messaging</strong> creates a registration token for the app installation and may subscribe the installation to a general notification topic. If you are signed in, the token and a last-active timestamp are stored with your Firestore customer profile so that account-specific and order notifications can be delivered.</p><p>You can disable notifications in <strong>Tawaqqul</strong> settings or your device settings. Disabling notifications does not prevent you from using the main Islamic reading features.</p></div>
+</section>
+<section class="policy-section" id="section-8-third-party-services" data-section>
+  <div class="section-heading">
+    <span class="section-number">08</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Third-Party Services</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>The following third-party services may process information when you use the relevant feature:</p><h3>Google <strong>Firebase</strong></h3><p><strong>Firebase</strong> Authentication, Cloud Firestore, Cloud Messaging, and Cloud Functions support login, cloud data, Shop operations, feedback storage, and notifications. Google may process device, network, authentication, installation, and service-use information according to Google&#x27;s Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h3><strong>OpenStreetMap</strong> and <strong>Overpass API</strong></h3><p><strong>OpenStreetMap</strong> tiles and map data are used to display maps and find nearby mosques. Nearby searches may use public <strong>Overpass API</strong> mirrors operated by different organizations. Their server logs may include your IP address, request metadata, and requested geographic area. <strong>OpenStreetMap</strong> information and attribution: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">https://www.openstreetmap.org/copyright</a></p><h3><strong>AlAdhan</strong></h3><p><strong>AlAdhan</strong> receives coordinates and date information when prayer times are requested. Service information: <a href="https://aladhan.com/prayer-times-api" target="_blank" rel="noopener noreferrer">https://aladhan.com/prayer-times-api</a></p><h3><strong>Google Maps</strong></h3><p><strong>Google Maps</strong> is not the embedded map used for nearby-mosque browsing. When you tap Directions, <strong>Tawaqqul</strong> opens a <strong>Google Maps</strong> directions URL in an external app or browser with the mosque destination coordinates. From that point, Google&#x27;s terms and privacy policy apply.</p><h3><strong>Cloudflare</strong> and <strong>Resend</strong></h3><p>Feedback is sent through a <strong>Cloudflare</strong> Worker and may be delivered by <strong>Resend</strong> as an email notification. These providers may process the submitted feedback and standard network metadata according to their own policies.</p><h3>Affiliate Sites</h3><p>External affiliate links, product links, and other external websites are governed by the destination service&#x27;s own privacy policy. <strong>Tawaqqul</strong> does not control their data practices.</p></div>
+</section>
+<section class="policy-section" id="section-9-islamic-content-trackers-and-sensitive-information" data-section>
+  <div class="section-heading">
+    <span class="section-number">09</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Islamic Content, Trackers, and Sensitive Information</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>Quran reading progress, Amal Tracker entries, Ramadan Tracker entries, Zakat records, favorite mosques, and similar activity can reveal information about religious practice. Financial values entered into Zakat tools may also be sensitive.</p><p>Most such activity is stored only on your device. The main exception in the current build is that Zakat Tracker records and quiz or reward activity are synchronized with Firestore when you are signed in, as described above.</p><p>You choose whether to use these features and what information to enter. Do not enter information you do not want stored locally or, where cloud sync applies, associated with your account.</p><p>Islamic calculators and educational content are general tools. They are not a substitute for advice from a qualified scholar, mufti, financial professional, lawyer, or other appropriate professional.</p></div>
+</section>
+<section class="policy-section" id="section-10-how-we-use-information" data-section>
+  <div class="section-heading">
+    <span class="section-number">10</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>How We Use Information</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>We use information only for purposes reasonably connected to the feature, including:</p><ul class="policy-list"><li>Providing and personalizing app features</li><li>Calculating prayer times, Qibla, and distances</li><li>Finding and displaying nearby mosques</li><li>Authenticating accounts and maintaining sessions</li><li>Processing, delivering, and supporting Shop orders</li><li>Synchronizing Zakat, quiz, reward, and account information</li><li>Delivering local, broadcast, and account-specific notifications</li><li>Receiving feedback and responding when contact information is provided</li><li>Protecting the service, preventing misuse, and maintaining necessary business records</li></ul></div>
+</section>
+<section class="policy-section" id="section-11-data-sharing-and-sale" data-section>
+  <div class="section-heading">
+    <span class="section-number">11</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Data Sharing and Sale</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>We do not sell or rent personal information. The current app does not include an advertising SDK or an analytics SDK and does not use your information for targeted advertising.</p><p>Information is shared only when needed for a requested feature, with the service providers described in this Policy, to comply with law, to protect users or the service, or as part of a business transfer subject to appropriate safeguards.</p><p>Public reviews or questions may be visible to other users together with the display information included in that feature. Do not publish information you want to keep private.</p></div>
+</section>
+<section class="policy-section" id="section-12-data-retention" data-section>
+  <div class="section-heading">
+    <span class="section-number">12</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Data Retention</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>Local data is generally retained until it is removed by the app, you clear <strong>Tawaqqul</strong>&#x27;s storage, or you uninstall the app.</p><p>Cloud account, profile, Zakat, quiz, reward, feedback, notification, and Shop information is retained for as long as reasonably necessary to provide the service, maintain security, resolve disputes, satisfy transaction and recordkeeping needs, and comply with applicable law.</p><p>Order and transaction records may be retained after account deletion where reasonably required for legal, accounting, fraud-prevention, warranty, or dispute-resolution purposes. We may retain anonymized or aggregated information that no longer identifies you.</p></div>
+</section>
+<section class="policy-section" id="section-13-your-choices-access-correction-and-deletion" data-section>
+  <div class="section-heading">
+    <span class="section-number">13</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Your Choices, Access, Correction, and Deletion</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>You can:</p><ul class="policy-list"><li>Deny or revoke location permission</li><li>Disable notifications and exact reminders</li><li>Use general Islamic content without signing in</li><li>Edit supported profile information and saved addresses</li><li>Log out of your account</li><li>Clear local app data or uninstall the app</li><li>Request access, correction, or deletion of eligible cloud account data by contacting us</li></ul><p>Logging out only ends the signed-in session and clears the app&#x27;s local account cache. It does not delete cloud records.</p><p>To request deletion of your account and associated eligible data, email <a href="mailto:khandakartahib@gmail.com">khandakartahib@gmail.com</a> with the subject “<strong>Tawaqqul</strong> Data Deletion Request” and include the verified phone number used for the account. We may ask you to verify account ownership before acting on the request.</p><p>Clearing app data or uninstalling removes local data from that device but does not automatically delete Firestore data, submitted feedback, public reviews or questions, or Shop transaction records.</p></div>
+</section>
+<section class="policy-section" id="section-14-permissions" data-section>
+  <div class="section-heading">
+    <span class="section-number">14</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Permissions</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>The Android version may request or use:</p><ul class="policy-list"><li>Precise and approximate location for prayer times, Qibla, nearby mosques, and <strong>Smart Masjid Clock</strong> discovery</li><li>Notification permission for reminders and messages</li><li>Exact alarms, boot-completed handling, wake lock, and vibration for scheduled reminders</li><li>Internet and network-state access for online services</li></ul><p>You can manage permissions in your device settings. Denying a permission may limit the related feature but does not block offline Islamic reading content.</p></div>
+</section>
+<section class="policy-section" id="section-15-security" data-section>
+  <div class="section-heading">
+    <span class="section-number">15</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Security</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>We use reasonable technical and organizational safeguards appropriate to the current service, including <strong>Firebase</strong> authentication, Firestore security rules, server-side Cloud Functions for privileged messaging tasks, transport encryption for <strong>Tawaqqul</strong>&#x27;s fixed service endpoints, and access controls. External affiliate links are controlled by their destination providers.</p><p>No storage or transmission method is completely secure. You are responsible for protecting your device, SIM card, one-time passwords, and account access. Never share an OTP, password, payment PIN, or other secret through <strong>Tawaqqul</strong> feedback or product questions.</p></div>
+</section>
+<section class="policy-section" id="section-16-international-processing" data-section>
+  <div class="section-heading">
+    <span class="section-number">16</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>International Processing</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>Third-party providers may process data on servers located outside Bangladesh or outside your country of residence. Their processing is governed by their own terms, privacy policies, and applicable law.</p></div>
+</section>
+<section class="policy-section" id="section-17-children-s-privacy" data-section>
+  <div class="section-heading">
+    <span class="section-number">17</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Children&#x27;s Privacy</h2>
+    </div>
+  </div>
+  <div class="section-body"><p><strong>Tawaqqul</strong> provides general Islamic educational content that families may use, but account, feedback, reward, and Shop features are not directed specifically to children under 13.</p><p>We do not knowingly seek personal information from children under 13. Parents or guardians should supervise a child&#x27;s use of account and Shop features. If you believe a child has submitted personal information, contact us so we can review and take appropriate action.</p></div>
+</section>
+<section class="policy-section" id="section-18-accuracy-of-islamic-and-location-information" data-section>
+  <div class="section-heading">
+    <span class="section-number">18</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Accuracy of Islamic and Location Information</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>Prayer times, Qibla direction, mosque listings, Hijri dates, translations, tafsir, Hadith details, calculators, and other content may vary by source, calculation method, location accuracy, scholarly interpretation, or third-party data quality.</p><p>We make reasonable efforts to provide useful information, but important religious matters should be verified with qualified scholars or trusted Islamic authorities. Map and mosque information should also be independently confirmed when safety or travel decisions depend on it.</p></div>
+</section>
+<section class="policy-section" id="section-19-changes-to-this-policy" data-section>
+  <div class="section-heading">
+    <span class="section-number">19</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Changes to This Policy</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>We may update this Privacy Policy when <strong>Tawaqqul</strong>&#x27;s features, providers, or data practices change. The “Last Updated” date will show the latest revision. Material changes may also be communicated through the app where appropriate.</p></div>
+</section>
+<section class="policy-section" id="section-20-contact-us" data-section>
+  <div class="section-heading">
+    <span class="section-number">20</span>
+    <div>
+      <p class="section-kicker">Privacy Policy</p>
+      <h2>Contact Us</h2>
+    </div>
+  </div>
+  <div class="section-body"><p>For privacy questions, access or correction requests, and account or data deletion requests, contact:</p><p>Email: <a href="mailto:khandakartahib@gmail.com">khandakartahib@gmail.com</a></p></div>
+</section>
+<section class="policy-section commitment" id="privacy-commitment" data-section>
+  <div class="section-heading">
+    <span class="section-number section-number-heart">✓</span>
+    <div>
+      <p class="section-kicker">Our promise</p>
+      <h2>Our Privacy Commitment</h2>
+    </div>
+  </div>
+  <div class="section-body"><p><strong>Tawaqqul</strong> aims to provide useful Islamic resources while respecting the people who use the app. We will continue to review our code, permissions, providers, and policy as the app develops.</p><p>Thank you for using <strong>Tawaqqul</strong>.</p></div>
+</section>
+          <footer class="document-footer">
+            <p>Document version 1.0 · Published for the reviewed Tawaqqul app build dated August 22, 2026</p>
+            <a class="back-top" href="#top">↑ Back to top</a>
+          </footer>
+        </article>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const themeButton = document.getElementById('themeButton');
+      const savedTheme = localStorage.getItem('tawaqqul-policy-theme');
+      if (savedTheme === 'dark' || (!savedTheme && matchMedia('(prefers-color-scheme: dark)').matches)) {
+        root.dataset.theme = 'dark';
+      }
+      themeButton.addEventListener('click', () => {
+        root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('tawaqqul-policy-theme', root.dataset.theme);
+      });
+
+      const progress = document.getElementById('progress');
+      const updateProgress = () => {
+        const max = document.documentElement.scrollHeight - innerHeight;
+        progress.style.width = `${max > 0 ? (scrollY / max) * 100 : 0}%`;
+      };
+      addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+
+      const links = [...document.querySelectorAll('.toc a')];
+      const linkMap = new Map(links.map(link => [link.getAttribute('href').slice(1), link]));
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          links.forEach(link => link.classList.remove('active'));
+          const active = linkMap.get(entry.target.id);
+          if (active) {
+            active.classList.add('active');
+            active.scrollIntoView({ block: 'nearest' });
+          }
+        });
+      }, { rootMargin: '-18% 0px -70% 0px', threshold: 0 });
+      document.querySelectorAll('[data-section]').forEach(section => observer.observe(section));
+    })();
+  </script>
+</body>
+</html>
