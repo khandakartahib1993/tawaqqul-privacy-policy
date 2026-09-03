@@ -2,6 +2,13 @@
 
 Use these defaults for every workflow added to this repository.
 
+## Manual-first operations
+- Prefer direct repository edits/API operations over GitHub Actions whenever a runner is not actually needed.
+- Do not create or run a workflow just to edit files, update configuration, rename/move content, manage metadata, or perform other repository operations that can be done directly.
+- Use GitHub Actions only for work that genuinely requires a runner or external build environment, such as compiling APK/AAB binaries, running platform/toolchain validation, publishing Shorebird releases/patches, or deployments that cannot be performed directly.
+- Keep cleanup workflows manual-only unless there is a demonstrated recurring storage problem; do not schedule empty cleanup runs.
+- When a manual/direct path and a workflow path are both possible, choose the manual/direct path first to preserve Actions minutes.
+
 ## Minutes
 - Keep normal push CI lightweight: analyze, lint, unit tests, schema/syntax checks.
 - Run heavy APK/AAB builds, Shorebird validation/publish, full release packaging, and similar expensive jobs only when they are actually required, preferably by manual dispatch or release-specific triggers.
