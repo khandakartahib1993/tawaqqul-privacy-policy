@@ -1,0 +1,48 @@
+name: Actions Storage Cleanup
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: actions-storage-cleanup
+  cancel-in-progress: true
+
+jobs:
+  cleanup:
+    name: Delete stored Actions artifacts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Delete all stored workflow artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          artifact_list="$(mktemp)"
+          gh api --paginate "repos/$REPO/actions/artifacts?per_page=100" \
+            --jq '.artifacts[] | [.id, .size_in_bytes, .name] | @tsv' \
+            > "$artifact_list"
+
+          deleted=0
+          freed_bytes=0
+
+          while IFS=$'\t' read -r artifact_id size_bytes artifact_name; do
+            [ -n "${artifact_id:-}" ] || continue
+            echo "Deleting artifact $artifact_id: $artifact_name ($size_bytes bytes)"
+            gh api --method DELETE "repos/$REPO/actions/artifacts/$artifact_id"
+            deleted=$((deleted + 1))
+            freed_bytes=$((freed_bytes + size_bytes))
+          done < "$artifact_list"
+
+          rm -f "$artifact_list"
+
+          freed_mb="$(awk -v b="$freed_bytes" 'BEGIN { printf "%.1f", b / 1048576 }')"
+          echo "Deleted $deleted artifact(s); freed approximately $freed_mb MB."
